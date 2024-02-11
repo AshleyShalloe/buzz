@@ -10,6 +10,22 @@
             --styloGold: #cebea7;
         }
 
+        html {
+            font-family: sans-serif;
+            background: #e6e7e8;
+        }
+
+        body {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 30px;
+        }
+
         .key {
             fill: var(--styloGold) !important;
             stroke: black;
@@ -32,7 +48,7 @@
 </head>
 
 <body>
-    <button onclick="initAudioContext()">On</button>
+    Press space to play.
     <svg width="1500" height="400" xmlns="http://www.w3.org/2000/svg">
         <g>
             <g>
@@ -132,7 +148,7 @@
         var keyElms = document.getElementsByClassName("keyWhite")
 
         for (var i = 0; i < keyElms.length; i++) {
-            var note = chromaticScaleWhite[i%chromaticScaleWhite.length]
+            var note = chromaticScaleWhite[i % chromaticScaleWhite.length]
             var elm = keyElms[i]
             var octave = Math.floor(i / chromaticScaleWhite.length) + 4
             elm.dataset.note = `${note}${octave}`
@@ -145,7 +161,7 @@
         var keyElms = document.getElementsByClassName("keyBlack")
 
         for (var i = 0; i < keyElms.length; i++) {
-            var note = chromaticScaleBlack[i%chromaticScaleBlack.length]
+            var note = chromaticScaleBlack[i % chromaticScaleBlack.length]
             var elm = keyElms[i]
             var octave = Math.floor(i / chromaticScaleBlack.length) + 4
             elm.dataset.note = `${note}${octave}`
@@ -161,11 +177,12 @@
             audioCtx = new (window.AudioContext || window.webkitAudioContext)();
             mainGainNode = audioCtx.createGain();
             mainGainNode.connect(audioCtx.destination);
-            mainGainNode.gain.value = 0; // start at zero volume
+            mainGainNode.gain.value = 0.15;
         }
     }
 
     window.addEventListener("keydown", (e) => {
+        initAudioContext()
         switch (e.key) {
             case " ":
                 e.preventDefault()
