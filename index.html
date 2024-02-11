@@ -44,65 +44,144 @@
             text-anchor: middle;
             font-family: sans-serif;
         }
+
+        #case {
+            background: black;
+            border: 10px solid black;
+            width: 1500px;
+            margin: 20px;
+        }
+
+        #caseTop {
+            height: 600px;
+        }
+
+        #caseBottom {
+            background: #f1f1f1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #caseTopGrille {
+            height: 500px;
+            background: repeating-linear-gradient(#e3e3e3 0px, black 20px);
+        }
+
+        #caseTopStylusSection {
+            height: 100px;
+        }
+
+        #caseTopBadge {
+            background: black;
+            font-size: 80px;
+            color: #f1f1f1;
+            text-shadow: 0px 0px 5px grey;
+            width: max-content;
+            padding: 15px 30px;
+            font-style: italic;
+            position: relative;
+            top: 30px;
+            left: 880px;
+        }
+
+        #caseTopStylusGarage {
+            background: rgb(36, 36, 36);
+            height: 70px;
+            width: 1000px;
+            position: relative;
+            left: 500px;
+            top: 10px;
+            border-top-left-radius: 70px;
+            border-bottom-left-radius: 70px;
+            color: black;
+            text-shadow: 0px 0px 3px #b0b0b0;
+            text-indent: -100px;
+            display: flex;
+            font-size: x-large;
+            align-items: center;
+        }
+        #caseBottomSwitches{
+            margin-left: 50px;
+        }
     </style>
 </head>
 
 <body>
-    Press space to play.
-    <svg width="1500" height="400" xmlns="http://www.w3.org/2000/svg">
-        <g>
-            <g>
-                <rect class="key keyWhite" id="key1" x="10" y="100" />
-                <rect class="key keyWhite" id="key2" x="110" y="100" />
-                <rect class="key keyWhite" id="key3" x="210" y="100" />
-                <rect class="key keyWhite" id="key4" x="310" y="100" />
-                <rect class="key keyWhite" id="key5" x="410" y="100" />
-                <rect class="key keyWhite" id="key6" x="510" y="100" />
-                <rect class="key keyWhite" id="key7" x="610" y="100" />
-                <rect class="key keyWhite" id="key8" x="710" y="100" />
-                <rect class="key keyWhite" id="key9" x="810" y="100" />
-                <rect class="key keyWhite" id="key10" x="910" y="100" />
-                <rect class="key keyWhite" id="key11" x="1010" y="100" />
-                <rect class="key keyWhite" id="key12" x="1110" y="100" />
-            </g>
-            <g>
-                <polygon class="key keyBlack" id="key1_5" points="60,100 60,170 75,187.5 145,187.5 160,170 160,100" />
-                <polygon class="key keyBlack" id="key3_5" points="260,100 260,170 275,187.5 345,187.5 360,170 360,100" />
-                <polygon class="key keyBlack" id="key4_5" points="360,100 360,170 375,187.5 445,187.5 460,170 460,100" />
-                <polygon class="key keyBlack" id="key6_5" points="560,100 560,170 575,187.5 645,187.5 660,170 660,100" />
-                <polygon class="key keyBlack" id="key7_5" points="660,100 660,170 675,187.5 745,187.5 760,170 760,100" />
-                <polygon class="key keyBlack" id="key8_5" points="760,100 760,170 775,187.5 845,187.5 860,170 860,100" />
-                <polygon class="key keyBlack" id="key10_5" points="960,100 960,170 975,187.5 1045,187.5 1060,170 1060,100" />
-                <polygon class="key keyBlack" id="key11_5" points="1060,100 1060,170 1075,187.5 1145,187.5 1160,170 1160,100" />
-            </g>
-        </g>
-        <g>
-            <g>
-                <text class="keyLabel" x="55" y="310">1</text>
-                <text class="keyLabel" x="155" y="310">2</text>
-                <text class="keyLabel" x="255" y="310">3</text>
-                <text class="keyLabel" x="355" y="310">4</text>
-                <text class="keyLabel" x="455" y="310">5</text>
-                <text class="keyLabel" x="555" y="310">6</text>
-                <text class="keyLabel" x="655" y="310">7</text>
-                <text class="keyLabel" x="755" y="310">8</text>
-                <text class="keyLabel" x="855" y="310">9</text>
-                <text class="keyLabel" x="955" y="310">10</text>
-                <text class="keyLabel" x="1055" y="310">11</text>
-                <text class="keyLabel" x="1155" y="310">12</text>
-            </g>
-            <g>
-                <text class="keyLabel" x="110" y="85">1.5</text>
-                <text class="keyLabel" x="310" y="85">3.5</text>
-                <text class="keyLabel" x="410" y="85">4.5</text>
-                <text class="keyLabel" x="610" y="85">6.5</text>
-                <text class="keyLabel" x="710" y="85">7.5</text>
-                <text class="keyLabel" x="810" y="85">8.5</text>
-                <text class="keyLabel" x="1010" y="85">10.5</text>
-                <text class="keyLabel" x="1110" y="85">11.5</text>
-            </g>
-        </g>
-    </svg>
+    <div style="font-size: xx-large; margin-left: 20px;">Press space to play.</div>
+    <div id="case">
+        <div id="caseTop">
+            <div id="caseTopGrille">
+                <div id="caseTopBadge">AshleyWozEre</div>
+            </div>
+            <div id="caseTopStylusSection">
+                <div id="caseTopStylusGarage">Stylus▶</div>
+            </div>
+        </div>
+        <div id="caseBottom">
+            <div id="caseBottomSwitches">
+                <div style="background: black; color: #f1f1f1; display: flex; align-items: center; flex-direction: column; font-size: xx-large">
+                    <div style="padding: 10px 50px">OFF</div>
+                    <div style="padding: 20px 60px; background: #f1f1f1; color: black; writing-mode: vertical-lr; font-size: medium">POWER</div>
+                    <div style="padding: 10px 50px;">ON</div>
+                </div>
+            </div>
+            <svg width="1250" height="330" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <g>
+                        <rect class="key keyWhite" id="key1" x="10" y="100" />
+                        <rect class="key keyWhite" id="key2" x="110" y="100" />
+                        <rect class="key keyWhite" id="key3" x="210" y="100" />
+                        <rect class="key keyWhite" id="key4" x="310" y="100" />
+                        <rect class="key keyWhite" id="key5" x="410" y="100" />
+                        <rect class="key keyWhite" id="key6" x="510" y="100" />
+                        <rect class="key keyWhite" id="key7" x="610" y="100" />
+                        <rect class="key keyWhite" id="key8" x="710" y="100" />
+                        <rect class="key keyWhite" id="key9" x="810" y="100" />
+                        <rect class="key keyWhite" id="key10" x="910" y="100" />
+                        <rect class="key keyWhite" id="key11" x="1010" y="100" />
+                        <rect class="key keyWhite" id="key12" x="1110" y="100" />
+                    </g>
+                    <g>
+                        <polygon class="key keyBlack" id="key1_5" points="60,100 60,170 75,187.5 145,187.5 160,170 160,100" />
+                        <polygon class="key keyBlack" id="key3_5" points="260,100 260,170 275,187.5 345,187.5 360,170 360,100" />
+                        <polygon class="key keyBlack" id="key4_5" points="360,100 360,170 375,187.5 445,187.5 460,170 460,100" />
+                        <polygon class="key keyBlack" id="key6_5" points="560,100 560,170 575,187.5 645,187.5 660,170 660,100" />
+                        <polygon class="key keyBlack" id="key7_5" points="660,100 660,170 675,187.5 745,187.5 760,170 760,100" />
+                        <polygon class="key keyBlack" id="key8_5" points="760,100 760,170 775,187.5 845,187.5 860,170 860,100" />
+                        <polygon class="key keyBlack" id="key10_5" points="960,100 960,170 975,187.5 1045,187.5 1060,170 1060,100" />
+                        <polygon class="key keyBlack" id="key11_5" points="1060,100 1060,170 1075,187.5 1145,187.5 1160,170 1160,100" />
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <text class="keyLabel" x="55" y="310">1</text>
+                        <text class="keyLabel" x="155" y="310">2</text>
+                        <text class="keyLabel" x="255" y="310">3</text>
+                        <text class="keyLabel" x="355" y="310">4</text>
+                        <text class="keyLabel" x="455" y="310">5</text>
+                        <text class="keyLabel" x="555" y="310">6</text>
+                        <text class="keyLabel" x="655" y="310">7</text>
+                        <text class="keyLabel" x="755" y="310">8</text>
+                        <text class="keyLabel" x="855" y="310">9</text>
+                        <text class="keyLabel" x="955" y="310">10</text>
+                        <text class="keyLabel" x="1055" y="310">11</text>
+                        <text class="keyLabel" x="1155" y="310">12</text>
+                    </g>
+                    <g>
+                        <text class="keyLabel" x="110" y="85">1.5</text>
+                        <text class="keyLabel" x="310" y="85">3.5</text>
+                        <text class="keyLabel" x="410" y="85">4.5</text>
+                        <text class="keyLabel" x="610" y="85">6.5</text>
+                        <text class="keyLabel" x="710" y="85">7.5</text>
+                        <text class="keyLabel" x="810" y="85">8.5</text>
+                        <text class="keyLabel" x="1010" y="85">10.5</text>
+                        <text class="keyLabel" x="1110" y="85">11.5</text>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </div>
 
 </body>
 <script>
